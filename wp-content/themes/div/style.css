@@ -48,12 +48,16 @@ div.custom-menu-class a {
 .posts,
 .most_viewed {
   margin: auto 20%;
+  flex-wrap: wrap;
 }
 .latest_post {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin: 20px auto;
+}
+.latest_post:first-child {
+  width: 550px;
 }
 
 /* footer */
@@ -71,6 +75,25 @@ div.custom-menu-class a {
   /* padding: 10px 0; */
 }
 
+.category {
+  background-color: azure;
+  padding: 20px;
+  width: fit-content;
+}
+.rc {
+  background-color: azure;
+  padding: 10px;
+  margin: 5px;
+}
+.rcc {
+  background-color: beige;
+  padding: 10px;
+  margin: 25px;
+}
+
+.rccc {
+  flex-direction: column;
+}
 /* .beneath {
   display: flex;
   justify-content: space-around;

@@ -28,7 +28,7 @@
 </div> -->
 <div class="posts">
 
-<h2>Latest Articles</h2>
+<h2 class="category">Latest Articles</h2>
 <div class="latest_post">
   <!-- <h2>Latest Articles</h2> -->
   <?php 
@@ -42,8 +42,11 @@
 <?php if ( $the_query->have_posts() ) : ?>
   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-  <h1><?php the_title(); ?></h1>
-  <p><?php the_excerpt(); ?></p>
+  <div class="rccc">
+  <h1 class="rc"><?php the_title(); ?></h1>
+  <p class="rcc"><?php the_excerpt(); ?></p>
+  </div>
+  
     
 
   <?php endwhile; ?>
@@ -57,13 +60,69 @@
 </div>
 
 
+
 <div class="most_viewed">
-  <h2>Most Viewed</h2>
+<hr />
+  <h2 class="category">Most Viewed</h2>
   <div class="most_viewed_post">
   <?php 
    // the query
    $the_query = new WP_Query( array(
     //  'category_name' => 'news',
+      'posts_per_page' => 3,
+   )); 
+?>
+
+<?php if ( $the_query->have_posts() ) : ?>
+  <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+    <h1><?php the_title(); ?></h1>
+    <p><?php the_excerpt(); ?></p>
+
+  <?php endwhile; ?>
+  <?php wp_reset_postdata(); ?>
+
+<?php else : ?>
+  <p><?php __('No News'); ?></p>
+<?php endif; ?>
+  </div>
+</div>
+
+<div class="most_viewed">
+<hr />
+  <h2 class="category">Industry</h2>
+  <div class="most_viewed_post">
+  <?php 
+   // the query
+   $the_query = new WP_Query( array(
+     'category_name' => 'Industriy',
+      'posts_per_page' => 3,
+   )); 
+?>
+
+<?php if ( $the_query->have_posts() ) : ?>
+  <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+    <h1><?php the_title(); ?></h1>
+    <p><?php the_excerpt(); ?></p>
+
+  <?php endwhile; ?>
+  <?php wp_reset_postdata(); ?>
+
+<?php else : ?>
+  <p><?php __('No News'); ?></p>
+<?php endif; ?>
+  </div>
+</div>
+
+<div class="most_viewed">
+<hr />
+  <h2 class="category">Innovation</h2>
+  <div class="most_viewed_post">
+  <?php 
+   // the query
+   $the_query = new WP_Query( array(
+     'category_name' => 'Innovation',
       'posts_per_page' => 3,
    )); 
 ?>
