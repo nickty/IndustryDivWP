@@ -17,4 +17,11 @@
 </head>
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-    
+   
+  <header class="divnav">
+    <div>
+        LOGO
+    </div>
+  <?php wp_nav_menu( array( 'theme_location' => 'nav menu', 'container_class' => 'custom-menu-class' ) ); ?>
+  </header>
+ 
