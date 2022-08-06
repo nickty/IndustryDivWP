@@ -6,6 +6,10 @@
  * @format
  */
 
+.body {
+  font-family: 'Raleway', sans-serif;
+}
+
 .divnav {
   display: flex;
   align-items: center;
@@ -28,3 +32,48 @@ div.custom-menu-class li {
 div.custom-menu-class a {
   color: #000;
 }
+
+.slider {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.image img {
+  margin: auto;
+  width: 55%;
+  height: 55%;
+}
+
+/* front page  */
+.posts,
+.most_viewed {
+  margin: auto 20%;
+}
+.latest_post {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px auto;
+}
+
+/* footer */
+.footer_container {
+  background-color: gray;
+}
+.footer_inner,
+.beneath {
+  margin: auto 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 80%; */
+  /* margin: 20px auto; */
+  /* padding: 10px 0; */
+}
+
+/* .beneath {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+} */
